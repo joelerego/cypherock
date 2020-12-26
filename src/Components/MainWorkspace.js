@@ -3,13 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import MainPanel from './MainPanel';
 import MainTable from './MainTable';
+import ReceiveButton from './ReceiveButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     background: "#0a1018",
     width: "100vw",
-    height: "100vh"
+    height: "120vh",
   },
 }));
 
