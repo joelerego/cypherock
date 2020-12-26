@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import MainPanel from './MainPanel';
 import MainTable from './MainTable';
-import ReceiveButton from './ReceiveButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {

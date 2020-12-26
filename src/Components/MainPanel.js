@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
@@ -64,7 +63,7 @@ export default function MainPanel() {
                 <StyledTab label="Tutorials" />
                 <StyledTab label="Settings" />
             </StyledTabs>
-            <Button className={classes.button} variant="outlined" color="primary">Make Beneficiary</Button>
+            <Button className={classes.button} variant="outlined" color="secondary">Make Beneficiary</Button>
         </Paper>
         </div>
   );

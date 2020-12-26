@@ -5,85 +5,13 @@ import clsx from 'clsx';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
-import Check from '@material-ui/icons/Check';
 import SettingsIcon from '@material-ui/icons/Settings';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import VideoLabelIcon from '@material-ui/icons/VideoLabel';
 import StepConnector from '@material-ui/core/StepConnector';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
-const QontoConnector = withStyles({
-  alternativeLabel: {
-    top: 10,
-    left: 'calc(-50% + 16px)',
-    right: 'calc(50% + 16px)',
-  },
-  active: {
-    '& $line': {
-      borderColor: '#784af4',
-    },
-  },
-  completed: {
-    '& $line': {
-      borderColor: '#784af4',
-    },
-  },
-  line: {
-    borderColor: '#eaeaf0',
-    borderTopWidth: 3,
-    borderRadius: 1,
-  },
-})(StepConnector);
-
-const useQontoStepIconStyles = makeStyles({
-  root: {
-    color: '#eaeaf0',
-    display: 'flex',
-    height: 22,
-    alignItems: 'center',
-  },
-  active: {
-    color: '#784af4',
-  },
-  circle: {
-    width: 8,
-    height: 8,
-    borderRadius: '50%',
-    backgroundColor: 'currentColor',
-  },
-  completed: {
-    color: '#784af4',
-    zIndex: 1,
-    fontSize: 18,
-  },
-});
-
-function QontoStepIcon(props) {
-  const classes = useQontoStepIconStyles();
-  const { active, completed } = props;
-
-  return (
-    <div
-      className={clsx(classes.root, {
-        [classes.active]: active,
-      })}
-    >
-      {completed ? <Check className={classes.completed} /> : <div className={classes.circle} />}
-    </div>
-  );
-}
-
-QontoStepIcon.propTypes = {
-  /**
-   * Whether this step is active.
-   */
-  active: PropTypes.bool,
-  /**
-   * Mark the step as completed. Is passed to child components.
-   */
-  completed: PropTypes.bool,
-};
+import Paper from '@material-ui/core/Paper';
 
 const ColorlibConnector = withStyles({
   alternativeLabel: {
@@ -173,13 +101,27 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
   },
+  stepper: {
+      background: '#000',
+      color: "#fff",
+  },
   button: {
-    marginRight: theme.spacing(1),
+    margin: theme.spacing(4),
   },
   instructions: {
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
+    margin: theme.spacing(4),
   },
+  paper: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    height: "10vh",
+    width: "400px",
+    borderRadius: "24px",
+    background: "#111",
+    color: "#DAA107",
+    margin: "20px",
+  }
 }));
 
 function getSteps() {
@@ -218,7 +160,12 @@ export default function ReceiveSteps() {
 
   return (
     <div className={classes.root}>
-      <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
+      <Stepper 
+        alternativeLabel 
+        activeStep={activeStep} 
+        connector={<ColorlibConnector/>}
+        className={classes.stepper}        
+    >
         {steps.map((label) => (
           <Step key={label}>
             <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
@@ -231,20 +178,23 @@ export default function ReceiveSteps() {
             <Typography className={classes.instructions}>
               All steps completed - you&apos;re finished
             </Typography>
-            <Button onClick={handleReset} className={classes.button}>
+            <Button onClick={handleReset} color="secondary" className={classes.button}>
               Reset
             </Button>
           </div>
         ) : (
           <div>
             <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+            <Paper className={classes.paper}>
+                <Typography className={classes.instructions}>Coin Address / Steps</Typography>
+            </Paper>
             <div>
-              <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
+              <Button disabled={activeStep === 0} color="secondary" onClick={handleBack} className={classes.button}>
                 Back
               </Button>
               <Button
                 variant="contained"
-                color="primary"
+                color="secondary"
                 onClick={handleNext}
                 className={classes.button}
               >

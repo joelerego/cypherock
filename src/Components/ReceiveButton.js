@@ -24,7 +24,7 @@ export default function AlertDialogSlide() {
   };
 
   return (
-    <div style={{margin: "8px"}}> 
+    <div> 
       <Button variant="outlined" color="secondary" onClick={handleClickOpen}>
         Receive
       </Button>
@@ -33,6 +33,13 @@ export default function AlertDialogSlide() {
         TransitionComponent={Transition}
         keepMounted
         onClose={handleClose}
+        PaperProps={{
+            style: {
+              backgroundColor: '#000',
+              color: '#FFF',
+              boxShadow: 'none',
+            },
+          }}
       >
         <DialogTitle id="alert-dialog-slide-title">{"Receive"}</DialogTitle>
         <DialogContent>
