@@ -45,13 +45,11 @@ export default function Receive() {
 				onClose={handleClose}
 				PaperProps={{
 					style: {
-						backgroundColor: '#000',
-						color: '#FFF',
+						backgroundColor: '#161c23',
 						boxShadow: 'none',
 					},
 				}}
 			>
-				<DialogTitle id="alert-dialog-slide-title">{'Receive'}</DialogTitle>
 				<DialogContent>
 					<ReceiveSteps />
 				</DialogContent>
