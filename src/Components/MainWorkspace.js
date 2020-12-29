@@ -5,7 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import MainTable from './MainTable';
+import Wallet from './Wallet';
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -269,7 +269,7 @@ export default function VerticalTabs() {
 				<Typography className={classes.textEnabled}>Portfolio</Typography>
 			</TabPanel>
 			<TabPanel value={value} index={1}>
-				<MainTable />
+				<Wallet />
 			</TabPanel>
 			<TabPanel value={value} index={2}>
 				<Typography className={classes.textEnabled}>

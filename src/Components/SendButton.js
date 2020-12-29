@@ -5,14 +5,14 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import ReceiveSteps from './ReceiveSteps';
-import ReceivedIcon from '@material-ui/icons/CallReceived';
+import SendIcon from '@material-ui/icons/CallMade';
 import { Typography } from '@material-ui/core';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
 	return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function Receive() {
+export default function SendButton() {
 	const [open, setOpen] = React.useState(false);
 
 	const handleClickOpen = () => {
@@ -26,16 +26,16 @@ export default function Receive() {
 	return (
 		<div>
 			<Button onClick={handleClickOpen}>
-				<ReceivedIcon style={{ color: '#8484F1' }} />
+				<SendIcon style={{ color: '#CAA276' }} />
 				<Typography
 					style={{
-						color: '#8484F1',
+						color: '#CAA276',
 						fontSize: '15px',
 						fontWeight: 600,
 						margin: '8px',
 					}}
 				>
-					Receive
+					Send
 				</Typography>
 			</Button>
 			<Dialog
