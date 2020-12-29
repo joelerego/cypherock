@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cypherock/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/cypherock/static/js/main.eec976f5.chunk.js",
+    "main.js.map": "/cypherock/static/js/main.eec976f5.chunk.js.map",
+    "runtime-main.js": "/cypherock/static/js/runtime-main.687094d6.js",
+    "runtime-main.js.map": "/cypherock/static/js/runtime-main.687094d6.js.map",
+    "static/js/2.a29b7e91.chunk.js": "/cypherock/static/js/2.a29b7e91.chunk.js",
+    "static/js/2.a29b7e91.chunk.js.map": "/cypherock/static/js/2.a29b7e91.chunk.js.map",
+    "static/js/3.b831b7a6.chunk.js": "/cypherock/static/js/3.b831b7a6.chunk.js",
+    "static/js/3.b831b7a6.chunk.js.map": "/cypherock/static/js/3.b831b7a6.chunk.js.map",
+    "index.html": "/cypherock/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/cypherock/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.a29b7e91.chunk.js.LICENSE.txt": "/cypherock/static/js/2.a29b7e91.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.687094d6.js",
+    "static/js/2.a29b7e91.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.eec976f5.chunk.js"
+  ]
+}
